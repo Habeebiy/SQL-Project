@@ -4,14 +4,24 @@ xcvxvxfv
 (fill in your description and goals here)
 
 ## Process
-### (your step 1)
-### (your step 2)
+
+1.	Create ecommerce Database
+2.	Created tables and columns for the ecommerce database 
+3.	Load/input values into the database
+4.	Validate the data the data
+5.	Analyze the data. 
+6.	Questioning the database to get meaningful insight 
+
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
-(discuss challenges you faced in the project)
+
+1.	Loading the .csv files into the database. 
+2.	Cleaning the database. This was a huge challenge as the ecommerce database was full of inconsistencies, NULL, and missing values, outliers, etc. 
+
 
 ## Future Goals
-(what would you do if you had more time?)
+
+Clean the database thoroughly which would help me come up with more accurate analysis 
