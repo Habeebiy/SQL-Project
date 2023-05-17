@@ -63,3 +63,61 @@ DROP COLUMN transactionid
 
 ALTER TABLE all_sessions
 DROP COLUMN itemrevenue
+
+**--Drop Userid From analytics table due to NULL values**
+ALTER TABLE analytics
+DROP COLUMN userid;
+
+**--UPDATE analytics table to convert NULL values to zero values on units_sold**
+UPDATE analytics
+SET units_sold = 0
+WHERE units_sold IS NULL;
+
+
+**-- Convert visitstatrttime column  to TO_Timestamp data type**
+ALTER TABLE analytics
+ALTER COLUMN visitstarttime TYPE timestamp
+USING To_timestamp(visitstarttime);
+
+**--Convert Timeonsite to Integer**
+ALTER TABLE analytics ALTER COLUMN timeonsite TYPE integer USING (timeonsite::integer);
+
+**--Drop socialengagementtype From analytics table**
+ALTER TABLE analytics
+DROP COLUMN socialengagementtype
+
+
+
+**--Change Datatypes on unit_price in analytics table**
+select
+CAST((unit_price / 1000000.) AS DECIMAL (10,2))
+from analytics
+LIMIT 100
+
+UPDATE analytics 
+SET unit_price = CAST((unit_price / 1000000.) AS DECIMAL(10,2));
+
+select * from analytics
+LIMIT 100
+
+select * from sales_report
+Limit 100
+
+--Check for duplicate
+SELECT productsku, COUNT(*)
+FROM sales_report
+GROUP BY productsku
+HAVING COUNT(*) > 1;
+
+--Drop productrefundamount
+--itemrevenue
+transactionid
+transactionrevenue
+
+
+ALTER TABLE all_sessions
+DROP COLUMN transactionid;
+
+ALTER TABLE all_sessions
+DROP COLUMN itemrevenue;
+
