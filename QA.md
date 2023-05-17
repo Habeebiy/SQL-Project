@@ -59,8 +59,8 @@ WHERE (fullVisitorID) IN (
 
 
 
-**--Remove column with empty input
-**
+**--Remove column with empty input**
+
 
 SELECT *
 FROM all_sessions
