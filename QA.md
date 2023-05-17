@@ -6,7 +6,8 @@ QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
 
--- Determine the Data types
+
+**-- Determine the Data types**
 
 SELECT *
 FROM information_schema.tables
@@ -33,7 +34,10 @@ SELECT column_name, data_type, is_nullable
 FROM information_schema.columns
 WHERE table_name = 'sales_report';
 
---Determine the unique values and remove duplicates
+
+
+
+**--Determine the unique values and remove duplicates**
 
 SELECT COUNT(DISTINCT fullvisitorid )
 FROM all_sessions;
@@ -52,7 +56,11 @@ WHERE (fullVisitorID) IN (
   HAVING COUNT(*) > 1
 );
 
---Remove column with empty input
+
+
+
+**--Remove column with empty input
+**
 
 SELECT *
 FROM all_sessions
@@ -65,7 +73,8 @@ ALTER TABLE all_sessions
 DROP COLUMN searchkeyword
 
 
---UPDATE analytics table to convert NULL values to zero values on units_sold
+
+**--UPDATE analytics table to convert NULL values to zero values on units_sold**
 UPDATE analytics
 SET units_sold = 0
 WHERE units_sold IS NULL;
