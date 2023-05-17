@@ -1,7 +1,10 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
-xcvxvxfv
+
+
+
 ## Project/Goals
-(fill in your description and goals here)
+The goal of this project is to transform, analyse, and understand the ecommerce database in order to gain meaningful insight which will help make an informed decision. 
+
 
 ## Process
 
@@ -13,8 +16,11 @@ xcvxvxfv
 6.	Questioning the database to get meaningful insight 
 
 
+
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
+
+
 
 ## Challenges 
 
@@ -22,6 +28,7 @@ xcvxvxfv
 2.	Cleaning the database. This was a huge challenge as the ecommerce database was full of inconsistencies, NULL, and missing values, outliers, etc. 
 
 
+
 ## Future Goals
 
-Clean the database thoroughly which would help me come up with more accurate analysis 
+Clean the database thoroughly which would help me come up with more accurate analysis and also to further validate and explore the ecommerce database. 
