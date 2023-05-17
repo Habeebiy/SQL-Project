@@ -1,5 +1,8 @@
 What issues will you address by cleaning the data?
-
+1. Dropping irrelevant column
+2. Address missing or inconsistent data
+3. Converting column to their appropriate datatypes where necessary
+4. Replace NULL values where necessary
 
 
 
@@ -44,11 +47,6 @@ SET units_sold = 0
 WHERE units_sold IS NULL;
 
 
-**-- Convert visitstatrttime column  to TO_Timestamp data type**
-ALTER TABLE analytics
-ALTER COLUMN visitstarttime TYPE timestamp
-USING To_timestamp(visitstarttime);
-
 
 
 **--Convert Timeonsite to Integer**
@@ -59,7 +57,7 @@ ALTER TABLE analytics
 DROP COLUMN socialengagementtype
 
 
-**----Drop productrefundamount AND itemrevenue as they both appear to have empty data**
+**--Drop productrefundamount AND itemrevenue as they both appear to have empty data**
 ALTER TABLE all_sessions
 DROP COLUMN transactionid
 
