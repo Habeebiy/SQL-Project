@@ -18,7 +18,10 @@ The goal of this project is to transform, analyse, and understand the ecommerce 
 
 
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+
+This database gave me an insight into an ecommerce store that sells globally. Majority of its sales comes from the United States with San Francisco having the most revenue generated in terms of the city. 
+The men’s T-shirt appears to be the most selling item whilst most of their sales comes through referral which also signifies customer satisfaction.
+
 
 
 
