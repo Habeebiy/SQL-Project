@@ -121,3 +121,11 @@ DROP COLUMN transactionid;
 ALTER TABLE all_sessions
 DROP COLUMN itemrevenue;
 
+
+--Convert char to Numeric data types in all_sessions table
+ALTER TABLE all_sessions 
+ALTER COLUMN totaltransactionrevenue;
+
+SET DATA TYPE numeric
+USING totaltransactionrevenue::numeric
+
